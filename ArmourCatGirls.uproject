@@ -3,6 +3,16 @@
 	"EngineAssociation": "5.5",
 	"Category": "Samples",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "ArmourCatGirls",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"GameplayAbilities"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
@@ -53,6 +63,10 @@
 		},
 		{
 			"Name": "NetworkPrediction",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayAbilities",
 			"Enabled": true
 		}
 	],
