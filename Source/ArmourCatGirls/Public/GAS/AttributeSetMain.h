@@ -18,8 +18,20 @@ UCLASS()
 class ARMOURCATGIRLS_API UAttributeSetMain : public UAttributeSet
 {
 	GENERATED_BODY()
-	
-	UPROPERTY()
-	FGameplayAttributeData Health = 100.0f;
+
+public:
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_Health)
+	FGameplayAttributeData Health;
 	ATTRIBUTE_ACCESSORS(UAttributeSetMain, Health)
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes", ReplicatedUsing = OnRep_MaxHealth)
+	FGameplayAttributeData MaxHealth;
+	ATTRIBUTE_ACCESSORS(UAttributeSetMain, MaxHealth)
+
+	UFUNCTION()
+	virtual void OnRep_Health(const FGameplayAttributeData& OldHealth);
+	UFUNCTION()
+	virtual void OnRep_MaxHealth(const FGameplayAttributeData& OldMaxHealth);
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };

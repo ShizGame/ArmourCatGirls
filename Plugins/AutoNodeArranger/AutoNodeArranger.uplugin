@@ -10,7 +10,7 @@
 	"DocsURL": "https://github.com/bstt/AutoNodeArranger",
 	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/565cf724479c4c2f9138b6428cfd74b1",
 	"SupportURL": "https://github.com/bstt/AutoNodeArranger#5-Contact-me-1",
-	"EngineVersion": "5.3.0",
+	"EngineVersion": "5.5.0",
 	"CanContainContent": false,
 	"Installed": true,
 	"Modules": [
